@@ -1,6 +1,7 @@
 # deeplearning in genomics and epigenomics
 
-This is a list of implementations of deep learning methods to biology, originally forked from https://github.com/hussius/deeplearning-biology
+This is a list of implementations of deep learning methods to biology. 
+Originally forked from https://github.com/hussius/deeplearning-biology
 
 ## Reviews <a name="reviews"></a>
 
@@ -27,7 +28,7 @@ This category is divided into several subfields.
 
 ### Variant calling <a name='genomics_variant-calling'></a>
 
-**DeepVariant** [[github](https://github.com/google/deepvariant)][[preprint](https://www.biorxiv.org/content/early/2016/12/21/092890)]
+**DeepVariant** [[paper](https://www.nature.com/articles/nbt.4235]
 
 This preprint from Google originally came out in late 2016 but it got the most publicity about a year later when the code was made public and press releases started appearing. The Google researchers approached a well-studied problem, variant calling from DNA sequencing data (where the aim is to correctly identify variations from the reference genome in an individual's DNA, e.g. mutations or polymorphisms) using a counter-intuitive but clever approach. Instead of using the nucleotides in the sequenced DNA fragments directly (in the form of the symbols A, C, G, T), they first converted the sequences into images and then applied convolutional neural networks to these images (which represent "pile-ups" or DNA sequences; stacks of aligned sequences.) This turned out to be a very effective way to call variants as proven by both Google's own and independent benchmarks.
 
@@ -39,7 +40,7 @@ The authors use a two-step model to predict the effect of genetic variants on ge
 
 ### Predicting enhancers and regulatory regions <a name='genomics_enhancers'></a>
 
-**DanQ: a hybrid convolutional and recurrent deep neural network for quantifying the function of DNA sequences** [[paper](https://academic.oup.com/nar/article/44/11/e107/2468300)]
+**(2016) DanQ: a hybrid convolutional and recurrent deep neural network for quantifying the function of DNA sequences** [[paper](https://academic.oup.com/nar/article/44/11/e107/2468300)]
 
 Made for predicting the function of non-protein coding DNA sequence. Uses a convolution layer to capture regulatory motifs (i e single DNA snippets that control the expression of genes, for instance), and a recurrent layer (of the LSTM type) to try to discover a “grammar” for how these single motifs work together. Based on Keras/Theano.
 
