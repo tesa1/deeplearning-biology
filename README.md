@@ -1,4 +1,4 @@
-# deeplearning-non-coding
+# deeplearning in genomics and epigenomics
 
 This is a list of implementations of deep learning methods to biology, originally published on [Follow the Data](https://followthedata.wordpress.com/). There is a slant towards genomics because that's the subfield that I follow most closely.
 
@@ -32,42 +32,30 @@ This category is divided into several subfields.
 This preprint from Google originally came out in late 2016 but it got the most publicity about a year later when the code was made public and press releases started appearing. The Google researchers approached a well-studied problem, variant calling from DNA sequencing data (where the aim is to correctly identify variations from the reference genome in an individual's DNA, e.g. mutations or polymorphisms) using a counter-intuitive but clever approach. Instead of using the nucleotides in the sequenced DNA fragments directly (in the form of the symbols A, C, G, T), they first converted the sequences into images and then applied convolutional neural networks to these images (which represent "pile-ups" or DNA sequences; stacks of aligned sequences.) This turned out to be a very effective way to call variants as proven by both Google's own and independent benchmarks.
 
 
-
-**Boosting Gene Expression Clustering with System-Wide Biological Information: A Robust Autoencoder Approach** [[bioRxiv preprint](https://www.biorxiv.org/content/early/2017/11/05/214122)]
-
-Uses a robust autoencoder (an autoencoder with an outlier filter) to cluster gene expression profiles. 
-
-**Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk** [[github](https://github.com/FunctionLab/ExPecto)][[paper](https://www.nature.com/articles/s41588-018-0160-6)]
+**Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk** [[paper](https://www.nature.com/articles/s41588-018-0160-6)]
 
 The authors use a two-step model to predict the effect of genetic variants on gene expression. In the first step, the authors trained a convolutional neural network to model the 2002 epigenetic marks collected in ENCODE and ROADMAP consortium. In the second step, the authors trained a tissue-specific regularized linear model on the cis-regulatory region of the gene that is encoded by the first step convolutional neural network model. Then the effect of the variants on tissue-specific gene is calculated by the decrease in predicted gene expression through *in silico* mutagenesis.
 
-### Imaging and gene expression <a name='imaging_expression'></a>
-
-**Transcriptomic learning for digital pathology** [[preprint](https://www.biorxiv.org/content/biorxiv/early/2019/10/11/760173.full.pdf)]
-
-From the abstract: "We propose a novel approach based on the integration of multiple data modes, and show that our deep learning model, HE2RNA, can be trained to systematically predict RNA-Seq profiles from whole-slide images alone, without the need for expert annotation. HE2RNA is interpretable by design, opening up new opportunities for virtual staining. In fact, it provides virtual spatialization of gene expression,as validated by double-staining on an independent dataset. Moreover, the transcriptomic representation learned by HE2RNA can be transferred to improve predictive performance for other tasks, particularly for small datasets."
 
 ### Predicting enhancers and regulatory regions <a name='genomics_enhancers'></a>
 
-Here the inputs are typically “raw” DNA sequence, and convolutional networks (or layers) are often used to learn regularities within the sequence. Hat tip to [Melissa Gymrek](http://melissagymrek.com/science/2015/12/01/unlocking-noncoding-variation.html) for pointing out some of these.
-
-**DanQ: a hybrid convolutional and recurrent deep neural network for quantifying the function of DNA sequences** [[github](https://github.com/uci-cbcl/DanQ)][[gitxiv](http://gitxiv.com/posts/aqrWwLoyg75jqNAYX/danq-a-hybrid-convolutional-and-recurrent-deep-neural)]
+**DanQ: a hybrid convolutional and recurrent deep neural network for quantifying the function of DNA sequences** [[paper](https://academic.oup.com/nar/article/44/11/e107/2468300)]
 
 Made for predicting the function of non-protein coding DNA sequence. Uses a convolution layer to capture regulatory motifs (i e single DNA snippets that control the expression of genes, for instance), and a recurrent layer (of the LSTM type) to try to discover a “grammar” for how these single motifs work together. Based on Keras/Theano.
 
-**Basset – learning the regulatory code of the accessible genome with deep convolutional neural networks** [[github](https://github.com/davek44/Basset)][[gitxiv](http://gitxiv.com/posts/fhET6G7gnBrGS8S9u/basset-learning-the-regulatory-code-of-the-accessible-genome)]
+**Basset – learning the regulatory code of the accessible genome with deep convolutional neural networks** [[github](https://github.com/davek44/Basset)][[paper](https://pubmed.ncbi.nlm.nih.gov/27197224/)]
 
 Based on Torch, this package focuses on predicting the accessibility (or “openness”) of the chromatin – the physical packaging of the genetic information (DNA+associated proteins). This can exist in more condensed or relaxed states in different cell types, which is partly influenced by the DNA sequence (not completely, because then it would not differ from cell to cell.)
 
-**Basenji – Sequential regulatory activity prediction across chromosomes with convolutional neural networks** [[github1](https://www.github.com/calico/basenji)][[github2](https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/gene_expression.py)][[biorxiv](https://www.biorxiv.org/content/early/2017/07/10/161851)]
+**Basenji – Sequential regulatory activity prediction across chromosomes with convolutional neural networks** [[paper](https://genome.cshlp.org/content/28/5/739.long)]
 
 A follow-up project to Basset, this Tensorflow-based model uses both standard and dilated convolutions to model regulatory signals and gene expression (in the form of CAGE tag density) in many different cell types. Notably, the underlying model has been brought into Google's Tensor2Tensor repository (see "github2" link above), which collects many models in image and speech recognition, machine translation, text classification etc. However, at the time of writing the Tensor2Tensor model seems not quite mature for easy use, so it is probably better to use the dedicated Basenji repo ("github1") for now. 
 
-**DeepSEA – Predicting effects of noncoding variants with deep learning–based sequence model** [[web server](http://deepsea.princeton.edu/job/analysis/create/)][[paper](http://www.nature.com/nmeth/journal/v12/n10/full/nmeth.3547.html)]
+**DeepSEA – Predicting effects of noncoding variants with deep learning–based sequence model** [[paper](http://www.nature.com/nmeth/journal/v12/n10/full/nmeth.3547.html)]
 
 Like the packages above, this one also models chromatin accessibility as well as the binding of certain proteins (transcription factors) to DNA and the presence of so-called histone marks that are associated with changes in accessibility. This piece of software seems to focus a bit more explicitly than the others on predicting how single-nucleotide mutations affect the chromatin structure. Published in a high-profile journal (Nature Methods).
 
-**DeepBind – Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning** [[code](http://tools.genes.toronto.edu/deepbind/)][[paper](http://www.nature.com/nbt/journal/v33/n8/full/nbt.3300.html)]
+**DeepBind – Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning** [[paper](http://www.nature.com/nbt/journal/v33/n8/full/nbt.3300.html)]
 
 This is from the group of Brendan Frey in Toronto, and the authors are also involved in the company Deep Genomics. DeepBind focuses on predicting the binding specificities of DNA-binding or RNA-binding proteins, based on experiments such as ChIP-seq, ChIP-chip, RIP-seq,  protein-binding microarrays, and HT-SELEX. Published in a high-profile journal (Nature Biotechnology.)
 
