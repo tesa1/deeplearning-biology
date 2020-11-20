@@ -1,11 +1,6 @@
-# deeplearning-biology
+# deeplearning-non-coding
 
 This is a list of implementations of deep learning methods to biology, originally published on [Follow the Data](https://followthedata.wordpress.com/). There is a slant towards genomics because that's the subfield that I follow most closely.
-
-
-## Table of contents
-    - [Predicting enhancers and regulatory regions](#genomics_enhancers)
-
 
 ## Reviews <a name="reviews"></a>
 
@@ -25,168 +20,6 @@ From the abstract: "Here we present deep-learning techniques for healthcare, cen
 
 This review, which features yours truly as one of its co-authors, is billed as a 'primer' which means it tries to help genomics researchers get started with deep learning. We tried to accomplish this by highlighting many practical issues such as tooling (not only deep learning libraries but also GPU cloud platforms, model zoos and online courses), defining your deep learning problem, explainability and troubleshooting. We also made a tutorial on Colaboratory that shows how to set up and run a simple convolutional network model for learning binding motifs, and how to inspect the model's predictions after it has been trained.
 
-**(2018-10) Deep learning in biomedicine** [[Nature Biotechnology paper](https://www.nature.com/articles/nbt.4233)]
-
-From the abstract: "Deep learning is beginning to impact biological research and biomedical applications as a result of its ability to integrate vast datasets, learn arbitrarily complex relationships and incorporate existing knowledge. Already, deep learning models can predict, with varying degrees of success, how genetic variation alters cellular processes involved in pathogenesis, which small molecules will modulate the activity of therapeutically relevant proteins, and whether radiographic images are indicative of disease. However, the flexibility of deep learning creates new challenges in guaranteeing the performance of deployed systems and in establishing trust with stakeholders, clinicians and regulators, who require a rationale for decision making. We argue that these challenges will be overcome using the same flexibility that created them; for example, by training deep models so that they can output a rationale for their predictions. Significant research in this direction will be needed to realize the full potential of deep learning in biomedicine."
-
-**(2018-04) Opportunities And Obstacles For Deep Learning In Biology And Medicine** [[bioRxiv preprint](http://biorxiv.org/content/early/2017/05/28/142760)][[J Roy Soc interface paper](https://royalsocietypublishing.org/doi/10.1098/rsif.2017.0387)]
-
-This impressive collaborative review was written completely in the open on [Github](https://github.com/greenelab/deep-review). It is focused on discussing how deep learning may be able to transform patient classification and treatment as well as fundamental biological research in the future, and what the main obstacles are that could prevent it from happening. A lot of interesting points are brought up here. Together with the review listed below, which has a more technical slant, you will get a good overview of how deep learning is used and can be used in biology and medicine.
-
-**(2017-01) Deep learning for health informatics** [[open access paper](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7801947)]
-
-An overview of several types of deep nets and their applications in translational bioinformatics, medical imaging, "pervasive sensing", medical data and public health.
-
-**(2016-07) Deep learning for computational biology** [[open access paper](http://msb.embopress.org/content/12/7/878)]
-
-This is a very nice review of deep learning applications in biology. It primarily deals with convolutional networks and explains well why and how they are used for sequence (and image) classification.
-
-## General <a name="general"></a>
-
-Papers on methods that are more widely applicable to biological or clinical data.
-
-**Fast animal pose estimation using deep neural networks** [[Github](https://github.com/talmo/leap)][[bioRxiv preprint](
-https://www.biorxiv.org/content/biorxiv/early/2018/05/25/331181.full.pdf)]
-
-This paper describes generating confidence maps and pose from flies. The repository includes a graphical user interface for labeling body parts.
-
-## Model repositories and resources <a name="repositories"></a>
-
-**The Kipoi repository accelerates community exchange and reuse of predictive models for genomics** [[Github](https://github.com/kipoi/kipoiseq/)][[Website](https://kipoi.org/)][[Paper](https://www.nature.com/articles/s41587-019-0140-0)] 
-
-Kipoi is a model zoo for genomics, installable by a simple pip install, which provides a consistent interface to hundreds of predictive models in genomics. Kipoi implements a standard set of data loaders for training and prediction of sequence models in deep learning.
-
-**DragoNN** [[Github](https://github.com/kundajelab/dragonn)][[Website](https://kundajelab.github.io/dragonn/)]
-
-DragoNN provides a toolkit for learning about modelling regulatory sequence with neural networks. It has tools for interpreting sequence models and web-based tutorials using Jupyter Notebooks for teaching interactive model manipulation and visualization.
-
-## Chemoinformatics and drug discovery <a name="chemo"></a>
-
-**Neural graph fingerprints** [[github](https://github.com/HIPS/neural-fingerprint)][[gitxiv](http://gitxiv.com/posts/DFtFytneou3SXLuSM/convolutional-networks-on-graphs-for-learning-molecular)]
-
-A convolutional net that can learn features which are useful for predicting properties of novel molecules; “molecular fingerprints”. The net works on a graph where atoms are nodes and bonds are edges. Developed by the group of Ryan Adams, who used to co-host the very good [Talking Machines](http://www.thetalkingmachines.com/) podcast.
-
-**Automatic chemical design using a data-driven continuous representation of molecules** [[github](https://github.com/aspuru-guzik-group/chemical_vae)][[preprint](https://arxiv.org/abs/1610.02415)]
-
-Abstract starts: "We report a method to convert discrete representations of molecules to and from a multidimensional continuous representation. This model allows us to generate new molecules for efficient exploration and optimization through open-ended spaces of chemical compounds."
-
-**Objective-Reinforced Generative Adversarial Networks (ORGAN)** [[github](https://github.com/gablg1/ORGAN)][[preprint](https://arxiv.org/abs/1705.10843)]
-
-A method that combines generative models with reinforcement learning to direct the generative process towards some desired target, ORGAN is a generic method for discrete data but is in this case exemplified by a drug discovery use case.
-
-**Molecular De-Novo Design through Deep Reinforcement Learning** [[github](https://github.com/MarcusOlivecrona/REINVENT)][[preprint](https://arxiv.org/abs/1704.07555)]
-
-PyTorch sequence generation model that uses reinforcement learning. Nice widget showing training progress and molecules generated during training is shown on the Github page. Abstract starts: "This work introduces a method to tune a sequence-based generative model for molecular de novo design that through augmented episodic likelihood can learn to generate structures with certain specified desirable properties. We demonstrate how this model can execute a range of tasks such as generating analogues to a query structure and generating compounds predicted to be active against a biological target."
-
-**One-shot learning models for drug discovery and DeepChem** [[github](https://github.com/deepchem/deepchem)][[Python library](http://deepchem.io/)][[paper](http://pubs.acs.org/doi/abs/10.1021/acscentsci.6b00367)]
-
-DeepChem is a "... [P]ython library that aims to make the use of machine-learning in drug discovery straightforward and convenient" which checks a lot of boxes when it comes to advanced deep learning: one-shot learning, graph convolutional networks, learning from less data, and LSTM embeddings. According to the GitHub site, "DeepChem aims to provide a high quality open-source toolchain that democratizes the use of deep-learning in drug discovery, materials science, and quantum chemistry."
-
-**The cornucopia of meaningful leads: Applying deep adversarial autoencoders for new molecule development in oncology** [[github](https://github.com/spoilt333/onco-aae)][[paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5355231/)]
-
-Explores the use of generative adversarial networks (GAN) in generating new molecular leads for drug candidates. In analogy to generating images or video that "look like" they come from some specified distribution, perhaps with some conditioning like "show me a cat picture", the authors reason that novel drug-like molecular structures can be generated with cues about what kind of drug one wants. Here they explore a specific type of generative network, an adversarial autoencoder (AAE), and adapt it into what they call a "artificially-intelligent drug discovery engine."
-
-**Deep learning enables rapid identification of potent DDR1 kinase inhibitors** [[github](https://github.com/insilicomedicine/gentrl)][[paper](https://www.nature.com/articles/s41587-019-0224-x)] In this paper from InSilico Medicine, which came out to some fanfare in 2019, an approach called GENTRL (Generative Tensorial Reinforcement Learning) was used to do rapid discovery of small-molecule inhibitors towards an interesting target. Using this method, the authors were able to come up with a candidate molecule in just 21 days. The model uses an initial generative step with a variational autoencoder and a reinforcement learning procedure for exploring the chemical space. They use an interesting loss function based on Kohonen self-organizing maps. Tensor decomposition was used to encode the relationship between chemical structures and properties. 
-
-**Deep Genomics Nominates Industry’s First AI-Discovered Therapeutic Candidate** [[preprint](https://www.biorxiv.org/content/biorxiv/early/2019/09/17/693572.full.pdf)]
-
-In September 2019, Deep Genomics announced that its deep learning-based platform had identified a therapeutic target and a corresponding drug candidate. The details of the disease-causing mechanism targeted by the proposed candidate molecule are in the preprint link above. 
-
-## Biomarker discovery <a name="biomarker"></a>
-
-**Deep biomarkers of human aging** [[online predictor](http://www.aging.ai/)][[paper](https://www.ncbi.nlm.nih.gov/pubmed/27191382)]
-
-From the abstract: "One of the major impediments in human aging research is the absence of a comprehensive and actionable set of biomarkers that may be targeted and measured to track the effectiveness of therapeutic interventions. In this study, we designed a modular ensemble of 21 deep neural networks (DNNs) of varying depth, structure and optimization to predict human chronological age using a basic blood test. "
-
-## Generic 'omics tools <a name="omics"></a>
-
-**Continuous Distributed Representation of Biological Sequences for Deep Genomics and Deep Proteomics**[[github](https://github.com/ehsanasgari/Deep-Proteomics)][[paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0141287)]
-
-The GitHub summary reads: "We introduce a new representation for biological sequences. Named bio-vectors (BioVec) to refer to biological sequences in general with protein-vectors (ProtVec) for proteins (amino-acid sequences) and gene-vectors (GeneVec) for gene sequences, this representation can be widely used in applications of deep learning in proteomics and genomics. Biovectors are basically n-gram character skip-gram wordvectors for biological sequences (DNA, RNA, and Protein). In this work, we have explored biophysical and biochemical meaning of this space. In addition, in variety of bioinformatics tasks we have shown the strength of such a sequence representation."
-
-**pysster: Learning Sequence and Structure Motifs in DNA and RNA Sequences using Convolutional Neural Networks**[[github](https://github.com/budach/pysster)][[preprint](https://www.biorxiv.org/content/early/2017/12/06/230086)]
-
-A toolbox for learning motifs from DNA/RNA sequence data using convolutional neural networks, this Tensorflow-based library supposedly runs on GPU out of the box and also does things like hyperparameter optimization and visualizations of what different network layers are learning.
-
-### NLP inspired <a name='omics_nlp'></a>
-
-**Genomic-ULMFiT: ULMFiT for Genomic Sequence Data** [[github](https://github.com/kheyer/Genomic-ULMFiT)]
-
-This repo is an implementation of FastAI's ULMFiT language transfer learning model for genomics. ULMFiT is based on an AWD-LSTM model and has been shown to be very effective for solving various text classification tasks. Here, the repo's author has extended FastAI's classes with specific subclasses for DNA sequence data. The concept with ULMFiT is that you (1) learn a language model from a large body of text in an unsupervised way (ie you don't need any labels) by having the model guess the next word (or token); (2) take the language model from step (1) and fine-tune it on the (probably) smaller labeled data set that you want to do classification on, but still do the training without labels in this step (and try to predict the next word), (3) finally fine-tune on the final classification task, using the labels. In genomics, the large body of text in step (1) could be, for instance, the whole human genome, or some other subset of GenBank/Sequence Read Archive/... The author shows that this approach works quite well for a range of classification problems, like E. coli and human promoter classification, metagenomic classification, enhancer classification and mRNA/lincRNA classification. 
-
-**Biological Structure and Function Emerge from Scaling Unsupervised Learning to 250 Million Protein Sequences** [[preprint](https://www.biorxiv.org/content/10.1101/622803v1.full)]
-
-In this work from Facebook's AI group, the BERT language model is used to train a language model on 86 billion amino acids across 250 million sequences. Like with ULMFiT (above), the idea is to use transfer learning: pre-training on a massive amount of data to teach a model something about the underlying logic of the language of DNA or proteins, in order to then be able to fine-tune the model for specific tasks. Unfortunately I haven't found any implementation for this yet.
-
-### Multi-omics integration <a name='integration'></a>
-
-**Rise of Deep Learning for Genomic, Proteomic, and Metabolomic Data Integration in Precision Medicine.** [[paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6207407/)]
-
-A review paper about the potential of deep learning for multi-omics data integration.
-
-## Proteomics <a name="proteomics"></a>
-
-**Pcons2 – Improved Contact Predictions Using the Recognition of Protein Like Contact Patterns** [[web interface](http://c2.pcons.net/)]
-
-Here, a “deep random forest” with five layers is used to improve predictions of which residues (amino acids) in a protein are physically interacting which each other. This is useful for predicting the overall structure of the protein (a very hard problem.)
-
-**A Deep Learning Model for Predicting Tumor Suppressor Genes and Oncogenes from PDB Structure** [[github](https://github.com/tavanaei/Cancer-Suppressor-Gene-Deep-Learning)][[bioRxiv preprint](https://www.biorxiv.org/content/early/2017/10/22/177378)]
-
-The authors use CNNs on feature maps extracted from protein 3D structures in the Protein Data Base (PDB) to predict oncogenes and tumor-suppressor genes.   
-
-**Deep-RBPPred: Predicting RNA binding proteins in the proteome scale based on deep learning** [[code](http://www.rnabinding.com/Deep_RBPPred/Deep-RBPPred.html)][[bioRxiv preprint](https://www.biorxiv.org/content/early/2017/10/27/210153)] 
-
-Predicts RNA-binding proteins using CNNs.
-
-**EVOVAE: Variational autoencoding of Protein Sequences**[[code](https://github.com/samsinai/VAE_protein_function)][[arXiv preprint](https://arxiv.org/abs/1712.03346)]
-
-From the abstract: "We present an embedding of natural protein sequences using a Variational Auto-Encoder and use it to predict how mutations affect protein function. We use this unsupervised approach to cluster natural variants and learn interactions between sets of positions within a protein. This approach generally performs better than baseline methods that consider no interactions within sequences, and in some cases better than the state-of-the-art approaches that use the inverse-Potts model. This generative model can be used to computationally guide exploration of protein sequence space and to better inform rational and automatic protein design."
-
-**Protein Loop Modeling Using Deep Generative Adversarial Network**[[paper](https://ieeexplore.ieee.org/abstract/document/8372069/)][[website](https://zhaoyu.li/loop_modeling_gan.html)]
-
-From the abstract: "Biology and medicine have a long-standing interest in computational structure prediction and modeling of proteins. There are often missing regions or regions that need to be remodeled in protein structures. The process of predicting particular missing regions in a protein structure is called loop modeling. In this paper, we propose a generative adversarial network (GAN) in deep learning for loop modeling using the idea of image inpainting. The generative network is to capture the context of the loop region and predict the missing area. The adversarial network is to make the prediction look real and provide gradients to the generative network. The proposed network was evaluated on a common benchmark for loop modeling. Experiments show that our method can successfully predict the loop region and has achieved better performance than the state-of-the-art tools. To our knowledge, this work represents the first attempt of using GAN for any bioinformatics studies."
-
-**Structure-Based Function Prediction using Graph Convolutional Networks** [[preprint](https://www.biorxiv.org/content/biorxiv/early/2019/10/04/786236.full.pdf)]
-
-From the abstract: "We present a deep learning Graph Convolutional Network (GCN) trained on sequence and structural data and evaluate it on ~40k proteins with known structures and functions from the Protein Data Bank (PDB). Our GCN predicts functions more accurately than Convolutional Neural Networks trained on sequence data alone and competing methods. Feature extraction via a language model removes the need for constructing multiple sequence alignments or feature engineering. Our model learns general structure-function relationships by robustly predicting functions of proteins with ≤ 30% sequence identity to the training set. Using class activation mapping, we can automatically identify structural regions at the residue-level that lead to each function prediction for every protein confidently predicted, advancing site-specific function prediction."
-
-**MiniFold: a re-implementation of DeepMind's AlphaFold** [[github](https://github.com/EricAlcaide/MiniFold)]
-
-One of the more spectacular successes of deep learning in biology in the recent years was when DeepMind's AlphaFold model won the CASP13 protein structure prediction challenge. It has not been listed on this page partly because there was no open implementation. MiniFold is an attempt to re-implement AlphaFold in a somewhat more minimalistic way.
-
-## Metabolomics <a name="metabolomics"></a>
-
-**Deep Learning Accurately Predicts Estrogen Receptor Status in Breast Cancer Metabolomics Data** [[code](http://pubs.acs.org/doi/suppl/10.1021/acs.jproteome.7b00595/suppl_file/pr7b00595_si_001.pdf)][[paper](http://pubs.acs.org/doi/full/10.1021/acs.jproteome.7b00595)]
-
-Classification algorithms for metabolomics data with respect to estrogen receptor status are compared, and the best performing algorithm is an autoencoder-based feedforward network with parameters tuned using H2O's R interface.
-
-### Generative models <a name='generative'></a>
-
-In many cases, it can be useful to generate synthetic data that resembles real data in order to boost dataset sizes or avoid violating patient privacy. Here, some of these approaches are listed.
-
-**Privacy-preserving generative deep neural networks support clinical data sharing** [[Github](https://github.com/greenelab/SPRINT_gan)][[bioRxiv preprint](https://www.biorxiv.org/content/early/2017/11/15/159756)]
-
-This describes a clever idea where generative adversarial networks (GANs) are used to synthesize data that closely resembles actual data measured on study participants, but which cannot be traced back to a specific subject. The latter aspect, called differential privacy, is incorporated into the method by design and gives strong guarantees of the likelihood that a subject could be identified as a member of a trial.
-
-**Creating artificial human genomes using generative models** [[preprint](https://www.biorxiv.org/content/biorxiv/early/2019/10/07/769091.full.pdf)]
-
-The authors compare Restricted Boltzmann Machines (RBM) and Generative Adversarial Networks (GAN) as tools for creating synthetic human genomes.
-
-**CellBender remove-background: a deep generative model for unsupervised removal of background noise from scRNA-seq datasets** [[code](https://github.com/broadinstitute/CellBender)][[preprint](https://www.biorxiv.org/content/biorxiv/early/2019/10/03/791699.full.pdf)]
-
-The authors present a generative model for removing statistical background noise in single-cell RNA-seq datasets.
-
-**scVAE: Single-cell variational auto-encoders** [[code](https://github.com/scvae/scvae)][[preprint](https://www.biorxiv.org/content/10.1101/318295v4)]
-
-scVAE is a command-line tool for modelling single-cell transcript counts using variational auto-encoders. Using variational autoencoders it is possible both to model the data in a more compact way and to generate realistic synthetic data based on the distribution that the real data come from.
-
-**Realistic in silico generation and augmentation of single cell RNA-seq data using Generative Adversarial Neural Networks** [[code](https://github.com/imsb-uke/scGAN)][[preprint](https://www.biorxiv.org/content/10.1101/390153v2)]
-
-From the abstract: "A fundamental problem in biomedical research is the low number of observations available, mostly due to a lack of available biosamples, prohibitive costs, or ethical reasons. Augmenting few real observations with generated in silico samples could lead to more robust analysis results and a higher reproducibility rate. Here we propose the use of conditional single cell Generative Adversarial Neural Networks (cscGANs) for the realistic generation of single cell RNA-seq data. cscGANs learn non-linear gene-gene dependencies from complex, multi cell type samples and use this information to generate realistic cells of defined types."
-
-**ProteinGAN: Expanding functional protein sequence space using generative adversarial networks** [[code](https://github.com/biomatterdesigns/ProteinGAN)][[preprint](https://www.biorxiv.org/content/early/2019/10/04/789719.full.pdf)]
-
-From the abstract: "De novo protein design for catalysis of any desired chemical reaction is a long standing goal in protein engineering, due to the broad spectrum of technological, scientific and medical applications. Currently, mapping protein sequence to protein function is, however, neither computationionally nor experimentally tangible. Here we developed ProteinGAN, a specialised variant of the generative adversarial network that is able to 'learn' natural protein sequence diversity and enables the generation of functional protein sequences. ProteinGAN learns the evolutionary relationships of protein sequences directly from the complex multidimensional amino acid sequence space and creates new, highly diverse sequence variants with natural-like physical properties. Using malate dehydrogenase as a template enzyme, we show that 24% of the ProteinGAN-generated and experimentally tested sequences are soluble and display wild-type level catalytic activity in the tested conditions in vitro, even in highly mutated (>100 mutations) sequences. ProteinGAN therefore demonstrates the potential of artificial intelligence to rapidly generate highly diverse novel functional proteins within the allowed biological constraints of the sequence space."
 
 ## Genomics <a name="genomics"></a>
 
@@ -198,32 +31,7 @@ This category is divided into several subfields.
 
 This preprint from Google originally came out in late 2016 but it got the most publicity about a year later when the code was made public and press releases started appearing. The Google researchers approached a well-studied problem, variant calling from DNA sequencing data (where the aim is to correctly identify variations from the reference genome in an individual's DNA, e.g. mutations or polymorphisms) using a counter-intuitive but clever approach. Instead of using the nucleotides in the sequenced DNA fragments directly (in the form of the symbols A, C, G, T), they first converted the sequences into images and then applied convolutional neural networks to these images (which represent "pile-ups" or DNA sequences; stacks of aligned sequences.) This turned out to be a very effective way to call variants as proven by both Google's own and independent benchmarks.
 
-### Gene expression <a name='genomics_expression'></a>
 
-In modeling gene expression, the inputs are typically numerical values (integers or floats) estimating how much RNA is produced from a DNA template in a particular cell type or condition.
-
-**Gene Expression Convolutions Using Gene Interaction Graphs** [[github](https://github.com/mila-iqia/gene-graph-conv)] [[arxiv](https://github.com/mila-iqia/gene-graph-conv)]
-They discuss how gene-gene interaction graphs (same pathway, protein-protein, co-expression, or research paper text association) can be used to impose a bias on a deep neural network model similar to the spatial bias imposed by convolutions on an image. They find this approach provides an advantage for particular tasks in a low data regime but is very dependent on the quality of the graph used. 
-
-**ADAGE – Analysis using Denoising Autoencoders of Gene Expression** [[github](https://github.com/greenelab/adage)][[gitxiv](http://gitxiv.com/posts/M9Dnc8HbKvNgsSp5D/adage-analysis-using-denoising-autoencoders-of-gene)]
-
-This is a Theano implementation of stacked denoising autoencoders for extracting relevant patterns from large sets of gene expression data, a kind of feature construction approach if you will. I have played around with this package quite a bit myself. The authors initially published a [conference paper](http://www.worldscientific.com/doi/abs/10.1142/9789814644730_0014) applying the model to a compendium of breast cancer (microarray) gene expression data, and more recently posted a paper on [bioRxiv](http://biorxiv.org/content/early/2015/11/05/030650) where they apply it to all available expression data (microarray and RNA-seq) on the pathogen Pseudomonas aeruginosa. (I understand that this manuscript will soon be published in a journal.)
-
-**Exploiting Ladder Networks for Gene Expression Classification** [[paper](https://link.springer.com/chapter/10.1007%2F978-3-319-78723-7_23)]
-
-This paper applies Ladder networks, a semi-supervised deep learning method, to the binary cancer classification problem. The model performance is evaluated on TCGA dataset against other deep learning and conventional machine learning approaches.  
-
-**Learning structure in gene expression data using deep architectures** [[paper](http://biorxiv.org/content/early/2015/11/16/031906)]
-
-This is also about using stacked denoising autoencoders for gene expression data, but there is no available implementation (as far as I could tell). Included here for the sake of completeness (or something.)
-
-**Gene expression inference with deep learning** [[github](https://github.com/uci-cbcl/D-GEX)][[paper](http://biorxiv.org/content/early/2015/12/15/034421)]
-
-This deals with a specific prediction task, namely to predict the expression of specified target genes from a panel of about 1,000 pre-selected “landmark genes”. As the authors explain, gene expression levels are often highly correlated and it may be a cost-effective strategy in some cases to use such panels and then computationally infer the expression of other genes. Based on Pylearn2/Theano.
-
-**Learning a hierarchical representation of the yeast transcriptomic machinery using an autoencoder model** [[paper](http://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0852-1)]
-
-The authors use stacked autoencoders to learn biological features in yeast from thousands of microarrays. They analyze the hidden layer representations and show that these encode biological information in a hierarchical way, so that for instance transcription factors are represented in the first hidden layer.
 
 **Boosting Gene Expression Clustering with System-Wide Biological Information: A Robust Autoencoder Approach** [[bioRxiv preprint](https://www.biorxiv.org/content/early/2017/11/05/214122)]
 
