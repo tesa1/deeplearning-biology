@@ -22,23 +22,8 @@ From the abstract: "Here we present deep-learning techniques for healthcare, cen
 This review, which features yours truly as one of its co-authors, is billed as a 'primer' which means it tries to help genomics researchers get started with deep learning. We tried to accomplish this by highlighting many practical issues such as tooling (not only deep learning libraries but also GPU cloud platforms, model zoos and online courses), defining your deep learning problem, explainability and troubleshooting. We also made a tutorial on Colaboratory that shows how to set up and run a simple convolutional network model for learning binding motifs, and how to inspect the model's predictions after it has been trained.
 
 
-## Genomics <a name="genomics"></a>
 
-This category is divided into several subfields.
-
-### Variant calling <a name='genomics_variant-calling'></a>
-
-**(2018) DeepVariant** [[paper](https://www.nature.com/articles/nbt.4235)]
-
-The preprint from Google originally came out in late 2016 but it got the most publicity about a year later when the code was made public and press releases started appearing. The Google researchers approached a well-studied problem, variant calling from DNA sequencing data (where the aim is to correctly identify variations from the reference genome in an individual's DNA, e.g. mutations or polymorphisms) using a counter-intuitive but clever approach. Instead of using the nucleotides in the sequenced DNA fragments directly (in the form of the symbols A, C, G, T), they first converted the sequences into images and then applied convolutional neural networks to these images (which represent "pile-ups" or DNA sequences; stacks of aligned sequences.) This turned out to be a very effective way to call variants as proven by both Google's own and independent benchmarks.
-
-
-**(2018) Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk** [[paper](https://www.nature.com/articles/s41588-018-0160-6)]
-
-The so-called 'ExPecto paper'. The authors use a two-step model to predict the effect of genetic variants on gene expression. In the first step, the authors trained a convolutional neural network to model the 2002 epigenetic marks collected in ENCODE and ROADMAP consortium. In the second step, the authors trained a tissue-specific regularized linear model on the cis-regulatory region of the gene that is encoded by the first step convolutional neural network model. Then the effect of the variants on tissue-specific gene is calculated by the decrease in predicted gene expression through *in silico* mutagenesis.
-
-
-### Predicting enhancers and regulatory regions <a name='genomics_enhancers'></a>
+### Deeplearning used to better understand non-coding regions and (epi)genetic regulation <a name='genomics_enhancers'></a>
 
 **(2015) DeepSEA – Predicting effects of noncoding variants with deep learning–based sequence model** [[paper](http://www.nature.com/nmeth/journal/v12/n10/full/nmeth.3547.html)]
 
@@ -93,6 +78,9 @@ A follow-up project to Basset, this Tensorflow-based model uses both standard an
 
 Wyeth Wasserman’s group have made a kind of [toolkit](https://github.com/yifeng-li/DECRES) (based on the Theano tutorials) for applying different kinds of deep learning architectures to cis-regulatory element (DNA stretches that can modulate the expression of a nearby gene) prediction. They use a specific “feature selection layer” in their nets to restrict the number of features in the models. This is implemented as an additional sparse one-to-one linear layer between the input layer and the first hidden layer of a multi-layer perceptron.
 
+**(2018) Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk** [[paper](https://www.nature.com/articles/s41588-018-0160-6)]
+
+The so-called 'ExPecto paper'. The authors use a two-step model to predict the effect of genetic variants on gene expression. In the first step, the authors trained a convolutional neural network to model the 2002 epigenetic marks collected in ENCODE and ROADMAP consortium. In the second step, the authors trained a tissue-specific regularized linear model on the cis-regulatory region of the gene that is encoded by the first step convolutional neural network model. Then the effect of the variants on tissue-specific gene is calculated by the decrease in predicted gene expression through *in silico* mutagenesis.
 
 **(2018) Predicting Transcription Factor Binding Sites with Convolutional Kernel Networks** [[paper](https://ieeexplore.ieee.org/document/8325519)]
 
