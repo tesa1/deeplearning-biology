@@ -2,33 +2,10 @@
 
 This is a list of implementations of deep learning methods to biology, originally published on [Follow the Data](https://followthedata.wordpress.com/). There is a slant towards genomics because that's the subfield that I follow most closely.
 
-Please, contribute to this growing list, especially in categories that I haven't covered well! Also, do add your contributions to [GitXiv](http://gitxiv.com/) as well if you can.
-
-You might also want to refer to the [awesome deepbio](https://github.com/gokceneraslan/awesome-deepbio) list.
 
 ## Table of contents
-  - [Reviews](#reviews)
-  - [General](#general)
-  - [Model repositories and resources](#repositories)
-  - [Chemoinformatics and drug discovery](#chemo)
-  - [Biomarker discovery](#biomarker)
-  - [Generic 'omics tools](#omics)
-    - [NLP inspired](#omics_nlp)
-    - [Multi-omics integration](#integration)
-  - [Proteomics](#proteomics)
-  - [Metabolomics](#metabolomics)
-  - [Generative models](#generative)
-  - [Genomics](#genomics)
-    - [Variant calling](#genomics_variant-calling)
-    - [Gene expression](#genomics_expression)
-    - [Imaging and gene expression](#imaging_expression)
     - [Predicting enhancers and regulatory regions](#genomics_enhancers)
-    - [Non-coding RNA](#genomics_non-coding)
-    - [Methylation](#genomics_methylation)
-    - [Single-cell applications](#genomics_single-cell)
-    - [Population genetics](#genomics_pop)
-    - [Systems biology](#sysbio)
-  - [Neuroscience](#neuro)
+
 
 ## Reviews <a name="reviews"></a>
 
