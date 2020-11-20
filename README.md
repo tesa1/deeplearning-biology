@@ -103,6 +103,7 @@ The authors use both RNN and CNN models to predict the effects of variants on CT
 
 **(2020) Network-based machine learning in colorectal and bladder organoid models predicts anti-cancer drug efficacy in patients** [[paper](https://www.nature.com/articles/s41467-020-19313-8)]
 
+Machine learning framework to identify robust drug biomarkers by taking advantage of protein-protein interaction networks using pharmacogenomic data derived from three-dimensional organoid culture models
 
 **(2020) Supervised learning of gene-regulatory networks based on graph distance profiles of transcriptomics data** [[paper](https://www.nature.com/articles/s41540-020-0140-1)]
 
