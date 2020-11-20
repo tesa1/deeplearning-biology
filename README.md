@@ -1,6 +1,6 @@
 # deeplearning in genomics and epigenomics
 
-This is a list of implementations of deep learning methods to biology, originally published on [Follow the Data](https://followthedata.wordpress.com/). There is a slant towards genomics because that's the subfield that I follow most closely.
+This is a list of implementations of deep learning methods to biology, originally forked from hussius/deeplearning-biology
 
 ## Reviews <a name="reviews"></a>
 
