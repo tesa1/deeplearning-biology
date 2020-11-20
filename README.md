@@ -23,7 +23,7 @@ This review, which features yours truly as one of its co-authors, is billed as a
 
 
 
-### Deeplearning used to better understand non-coding regions and (epi)genetic regulation <a name='genomics_enhancers'></a>
+## Deeplearning used to better understand non-coding regions and (epi)genetic regulation
 
 **(2015) DeepSEA – Predicting effects of noncoding variants with deep learning–based sequence model** [[paper](http://www.nature.com/nmeth/journal/v12/n10/full/nmeth.3547.html)]
 
