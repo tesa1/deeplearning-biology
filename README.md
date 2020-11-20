@@ -85,14 +85,14 @@ The so-called 'ExPecto paper'. The authors use a two-step model to predict the e
 
 This paper uses a hybrid of CNNs (to learn good representations) and kernel methods (to learn good prediction functions) to predict transcription factor binding sites.
 
-**(2018) Predicting DNA accessibility in the pan-cancer tumor genome using RNA-seq, WGS, and deep learning** [[bioRxiv preprint](https://www.biorxiv.org/content/early/2017/12/05/229385)]
+**(2018) Predicting DNA accessibility in the pan-cancer tumor genome using RNA-seq, WGS, and deep learning** [[preprint](https://www.biorxiv.org/content/early/2017/12/05/229385)]
 
 Like Basset (above) this paper shows how to predict DNA accessibility from sequence using CNNs, but it adds the possibility to leverage RNA sequencing data from different cell types as input. In this way implicit information related to cell type can be "transferred" to the accessibility prediction task.
 
-**(2019) Deep learning at base-resolution reveals motif syntax of the cis-regulatory code** [[bioRxiv preprint](https://www.biorxiv.org/content/biorxiv/early/2019/08/21/737981.full.pdf)]
+**(2019) Deep learning at base-resolution reveals motif syntax of the cis-regulatory code** [[preprint](https://www.biorxiv.org/content/biorxiv/early/2019/08/21/737981.full.pdf)]
 
 Here, a CNN with dilated convolutions is used to learn how different transcription factor binding motifs cooperate. This is the "motif syntax" mentioned in the title. The neural network is trained to predict the signal from a basepair-resolution ChIP assay (ChIP-nexus) and the trained network is then used to infer rules of motif cooperativity.
 
 **(2019) DeepMILO: a deep learning approach to predict the impact of non-coding sequence variants on 3D chromatin structure** [[paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-01987-4)] 
 
-From the paper  'we show that RNN can perform comparably with CNN model in learning DNA sequence patterns of anchors of insulator loops. Furthermore, they learned different features and combining their features delivered a better model compared to individual RNN or CNN models. The model can separate DNA sequences of insulator loop anchors bound by both CTCF and cohesin proteins from DNA sequences of CTCF ChIP-seq peaks bound by only CTCF and DNA sequences of regions without CTCF binding. DeepMILO can pair DNA sequences of anchors forming loops to distinguish insulator loops from different types of non-loops (i.e., fake loops) with high accuracy.'
+The authors use both RNN and CNN models to predict the effects of variants on CTCF/cohesin-mediated insulator loops. They find mutations at loop anchors are associated with upregulation of the cancer driver genes BCL2 and MYC.
