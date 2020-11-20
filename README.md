@@ -28,7 +28,7 @@ This category is divided into several subfields.
 
 ### Variant calling <a name='genomics_variant-calling'></a>
 
-**DeepVariant** [[paper](https://www.nature.com/articles/nbt.4235]
+**DeepVariant** [[paper](https://www.nature.com/articles/nbt.4235)]
 
 This preprint from Google originally came out in late 2016 but it got the most publicity about a year later when the code was made public and press releases started appearing. The Google researchers approached a well-studied problem, variant calling from DNA sequencing data (where the aim is to correctly identify variations from the reference genome in an individual's DNA, e.g. mutations or polymorphisms) using a counter-intuitive but clever approach. Instead of using the nucleotides in the sequenced DNA fragments directly (in the form of the symbols A, C, G, T), they first converted the sequences into images and then applied convolutional neural networks to these images (which represent "pile-ups" or DNA sequences; stacks of aligned sequences.) This turned out to be a very effective way to call variants as proven by both Google's own and independent benchmarks.
 
