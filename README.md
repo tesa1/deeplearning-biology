@@ -104,3 +104,10 @@ The authors use both RNN and CNN models to predict the effects of variants on CT
 **(2020) Network-based machine learning in colorectal and bladder organoid models predicts anti-cancer drug efficacy in patients** [[paper](https://www.nature.com/articles/s41467-020-19313-8)]
 
 
+**(2020) Supervised learning of gene-regulatory networks based on graph distance profiles of transcriptomics data** [[paper](https://www.nature.com/articles/s41540-020-0140-1)]
+
+A supervised approach which utilises support vector machine to reconstruct gene regulatory networks (GRNs) based on distance profiles obtained from a graph representation of transcriptomics data. This may be applicable with Hi-C or GRO-seq or any sort of promoter/enhancer or contact/contact map.
+
+**(2020) Predicting unrecognized enhancer-mediated genome topology by an ensemble machine learning model** [[preprint](https://www.biorxiv.org/content/10.1101/2020.04.10.036145v1.full)]
+
+The authors constructed an ensemble machine learning model, LoopPredictor, to predict enhancer mediated loops in a genome-wide fashion across different cell lines and species.
