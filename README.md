@@ -33,6 +33,10 @@ Like the packages above, this one also models chromatin accessibility as well as
 
 This is from the group of Brendan Frey in Toronto, and the authors are also involved in the company Deep Genomics. DeepBind focuses on predicting the binding specificities of DNA-binding or RNA-binding proteins, based on experiments such as ChIP-seq, ChIP-chip, RIP-seq,  protein-binding microarrays, and HT-SELEX. Published in a high-profile journal (Nature Biotechnology.)
 
+**(2016) DeepChrome: deep-learning for predicting gene expression from histone modifications** [[paper](https://academic.oup.com/bioinformatics/article/32/17/i639/2450757)]
+
+Predicting gene expression from histone mark information (REMC database).
+
 **(2016) DeeperBind - Enhancing Prediction of Sequence Specificities of DNA Binding Proteins** [[preprint](https://arxiv.org/pdf/1611.05777.pdf)]
 
 This is an attempt to improve on DeepBind by adding a recurrent sequence learning module (LSTM) after the convolutional layer(s). In this way, the authors propose to capture a positional dimension that is lost in the pooling step in the original DeepBind design. They claim that benchmarking shows that this architecture leads to superior performance compared to previous work.
@@ -96,3 +100,7 @@ Here, a CNN with dilated convolutions is used to learn how different transcripti
 **(2019) DeepMILO: a deep learning approach to predict the impact of non-coding sequence variants on 3D chromatin structure** [[paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-01987-4)] 
 
 The authors use both RNN and CNN models to predict the effects of variants on CTCF/cohesin-mediated insulator loops. They find mutations at loop anchors are associated with upregulation of the cancer driver genes BCL2 and MYC.
+
+**(2020) Network-based machine learning in colorectal and bladder organoid models predicts anti-cancer drug efficacy in patients** [[paper](https://www.nature.com/articles/s41467-020-19313-8)]
+
+
