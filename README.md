@@ -17,7 +17,7 @@ This is a very nice conceptual review of how deep learning can be used in genomi
 
 From the abstract: "Here we present deep-learning techniques for healthcare, centering our discussion on deep learning in computer vision, natural language processing, reinforcement learning, and generalized methods. We describe how these computational techniques can impact a few key areas of medicine and explore how to build end-to-end systems. Our discussion of computer vision focuses largely on medical imaging, and we describe the application of natural language processing to domains such as electronic health record data. Similarly, reinforcement learning is discussed in the context of robotic-assisted surgery, and generalized deep-learning methods for genomics are reviewed."
 
-**(2018-11) A primer on deep learning in genomics** [[Nature Genetics paper](https://www.nature.com/articles/s41588-018-0295-5)][[Colaboratory notebook with tutorial](https://colab.research.google.com/drive/17E4h5aAOioh5DiTo7MZg4hpL6Z_0FyWr)]
+**(2018-11) A primer on deep learning in genomics** [[Nature Genetics paper](https://www.nature.com/articles/s41588-018-0295-5)]
 
 This review, which features yours truly as one of its co-authors, is billed as a 'primer' which means it tries to help genomics researchers get started with deep learning. We tried to accomplish this by highlighting many practical issues such as tooling (not only deep learning libraries but also GPU cloud platforms, model zoos and online courses), defining your deep learning problem, explainability and troubleshooting. We also made a tutorial on Colaboratory that shows how to set up and run a simple convolutional network model for learning binding motifs, and how to inspect the model's predictions after it has been trained.
 
@@ -45,7 +45,6 @@ This is also about learning and predicting binding specificities of proteins to 
 
 This work describes a systematic exploration of convolutional neural network (CNN) architectures for DNA-protein binding. It concludes that the convolutional kernels are very important for the success of the networks on motif-based tasks. Interestingly, the authors have provided a Dockerized implementation of DeepBind from the Frey lab (see above) and also provide EC2-laucher scripts and code for comparing different GPU enabled models programmed in Caffe.
 
-
 **(2016) PEDLA: predicting enhancers with a deep learning-based algorithmic framework** [[paper](http://biorxiv.org/content/early/2016/01/07/036129)]
 
 This package is for predicting enhancers (stretches of DNA that can enhance the expression of a gene under certain conditions or in a certain kind of cell, often working at a distance from the gene itself) based on heterogeneous data from (e.g.) the ENCODE project, using 1,114 features altogether.
@@ -58,7 +57,7 @@ Made for predicting the function of non-protein coding DNA sequence. Uses a conv
 
 The group predicted transcription start site and regulatory regions but claims this solution could be easily generalized and predict other features too. FIDDLE stands for Flexible Integration of Data with Deep LEarning. The idea is to model several genomic signals jointly using convolutional networks. This could be for example DNase-seq, ATAC-seq, ChIP-seq, TSS-seq, maybe RNA-seq signals (as in .wig files with one value per base in the genome).
 
-**(2016) Basset – learning the regulatory code of the accessible genome with deep convolutional neural networks** [[github](https://github.com/davek44/Basset)][[paper](https://pubmed.ncbi.nlm.nih.gov/27197224/)]
+**(2016) Basset – learning the regulatory code of the accessible genome with deep convolutional neural networks** [[paper](https://pubmed.ncbi.nlm.nih.gov/27197224/)]
 
 Based on Torch, this package focuses on predicting the accessibility (or “openness”) of the chromatin – the physical packaging of the genetic information (DNA+associated proteins). This can exist in more condensed or relaxed states in different cell types, which is partly influenced by the DNA sequence (not completely, because then it would not differ from cell to cell.)
 
@@ -76,7 +75,7 @@ A follow-up project to Basset, this Tensorflow-based model uses both standard an
 
 **(2018) Genome-Wide Prediction of cis-Regulatory Regions Using Supervised Deep Learning Methods** (and several other papers applying various kinds of deep networks to regulatory region prediction) (one [[paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2187-1)] out of several)
 
-Wyeth Wasserman’s group have made a kind of [toolkit](https://github.com/yifeng-li/DECRES) (based on the Theano tutorials) for applying different kinds of deep learning architectures to cis-regulatory element (DNA stretches that can modulate the expression of a nearby gene) prediction. They use a specific “feature selection layer” in their nets to restrict the number of features in the models. This is implemented as an additional sparse one-to-one linear layer between the input layer and the first hidden layer of a multi-layer perceptron.
+Wyeth Wasserman’s group have made a kind of toolkit (based on the Theano tutorials) for applying different kinds of deep learning architectures to cis-regulatory element (DNA stretches that can modulate the expression of a nearby gene) prediction. They use a specific “feature selection layer” in their nets to restrict the number of features in the models. This is implemented as an additional sparse one-to-one linear layer between the input layer and the first hidden layer of a multi-layer perceptron.
 
 **(2018) Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk** [[paper](https://www.nature.com/articles/s41588-018-0160-6)]
 
@@ -96,4 +95,4 @@ Here, a CNN with dilated convolutions is used to learn how different transcripti
 
 **(2019) DeepMILO: a deep learning approach to predict the impact of non-coding sequence variants on 3D chromatin structure** [[paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-01987-4)] 
 
-Using DeepMILO, users can predict the impact of variants obtained by whole-genome sequencing of their samples on insulator loops from the cell type of interest.
+From the paper  'we show that RNN can perform comparably with CNN model in learning DNA sequence patterns of anchors of insulator loops. Furthermore, they learned different features and combining their features delivered a better model compared to individual RNN or CNN models. The model can separate DNA sequences of insulator loop anchors bound by both CTCF and cohesin proteins from DNA sequences of CTCF ChIP-seq peaks bound by only CTCF and DNA sequences of regions without CTCF binding. DeepMILO can pair DNA sequences of anchors forming loops to distinguish insulator loops from different types of non-loops (i.e., fake loops) with high accuracy.'
